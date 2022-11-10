@@ -1,0 +1,38 @@
+<body>
+  <app-navbar></app-navbar>
+  <div class="container">
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229929.1760314769!2d-80.36954411689972!3d25.78234042826896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20FL%2C%20USA!5e0!3m2!1sen!2sil!4v1621693831143!5m2!1sen!2sil" width="100%" height="650px" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <div class="contact-form">
+        <h1 class="title">Contact Us</h1>
+        <h2 class="subtitle">We are here assist you.</h2>
+        <form action="">
+          <input type="text" name="name" placeholder="Your Name" />
+          <input type="email" name="e-mail" placeholder="Your E-mail Adress" />
+          <input type="tel" name="phone" placeholder="Your Phone Number"/>
+          <textarea name="text" id="" rows="8" placeholder="Your Message"></textarea>
+          <button class="btn-send">Get a Call Back</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="near">
+      <img src="https://www.pedersenandpartners.com/sites/default/files/public/goran-civkarovski-s.jpg">
+      <div class="div-center">
+      <p class="bold">CFO.{{name2}}</p>
+      <p>profession: {{profession}}</p>
+      <p>email: {{email2}}</p>
+      <p>ID: {{id2}}</p>
+  </div>
+  </div>
+  
+  <div class="change">
+      <img src="https://i.pinimg.com/originals/3f/e9/fe/3fe9fe7f0573b76d84f1bc313e43c98d.jpg" alt="">
+      <p class="bold">CEO.{{name1}}</p>
+      <p>profession: {{profession}}</p>
+      <p>email: {{email1}}</p>
+      <p>ID: {{id1}}</p>
+  </div>
+  <app-footer></app-footer>
+  </body>

@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<section class="cart_section">
+    <div class="container">
+        <h2>Cart</h2>
+        <table>
+        <tr>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sub Total</th>
+            <th>Remove Item</th>
+        </tr>
+        <tr *ngFor="let getCartDetails of getCartDetails">
+            <td><img src="{{getCartDetails.imgUrl}}" alt="P1"></td>
+            <td>${{getCartDetails.price}}</td>
+            <td>
+                <div class="center">
+                <button type="button" class="btn" (click)="incQnt(getCartDetails.prodId,getCartDetails.qnt)"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                <span class="cart_vakue">{{getCartDetails.qnt}}</span>
+                <button type="button" class="btn" (click)="decQnt(getCartDetails.prodId,getCartDetails.qnt)"><span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span></button>
+                </div>
+            </td>
+            <td>$ {{getCartDetails.price * getCartDetails.qnt | number}}</td>
+            <button class="trash" (click)="singleDelete(getCartDetails.prodId)"> <i class="fas fa-trash-alt"></i> </button>
+        </tr>
+        </table>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Total - $ {{total}}</h3>
+                <button type="button" (click)="openSmallWindows()" class="btn1 btn-primary"><img class="paypal_logo" src="https://www.paypalobjects.com/webstatic/icon/pp258.png"><i class="pay">Pay</i><i class="pal">Pal</i></button>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

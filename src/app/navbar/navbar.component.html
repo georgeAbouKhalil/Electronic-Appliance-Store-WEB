@@ -1,0 +1,43 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a routerLink="/home"><img class="pic" src="https://i.imagesup.co/images2/37f486b8efd141540617ee12b45db3f23db3b261.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/home"><span routerLinkActive="activeStyle">Home</span></a>
+          </li>
+          <li class="nav-item dropdown"> 
+            <a class="nav-link dropdown" data-bs-toggle="dropdown" routerLinkActive="activeStyle" role="button" aria-haspopup="true" aria-expanded="false" routerLink="/product"><span routerLinkActive="activeStyle">Products</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contactus"><span routerLinkActive="activeStyle">Contact Us</span></a>
+          </li>
+          
+            <div class="cart_icon">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/mycart"><span routerLinkActive="activeStyle"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></a> <!--Cart-->
+          </li>
+          <!-- <div class="cart_value">{{cartItem}}</div> -->
+          <!-- <div class="cart_value" *ngIf="this.cart">{{countItem}}</div> -->
+          <!-- <div class="cart_value" *ngIf="this.cartService.cartItems.length > 0">{{this.countItem}}</div> -->
+          <div class="cart_value" *ngIf="this.items.length > 0">{{this.countItem}}</div>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about"><span routerLinkActive="activeStyle"><img class="smallPic" title="user info" src="https://virl.bc.ca/wp-content/uploads/2019/01/AccountIcon2.png" alt=""></span></a>
+          </li>
+          <li class="logout">
+            <a title="logout" routerLink="/logout"> <i class="fa fa-sign-out" aria-hidden="true" (click)="logout()"></i> </a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,104 @@
+<app-navbar *ngIf="this.comp"></app-navbar>
+<div class="ds">
+    <div class="col-md-12">
+        <div class="title-header text-center">
+            <h4>welcome {{userName}} to the Website</h4>
+        </div>
+    </div>
+</div>
+ <section class="imgCenter">
+    <img src="{{imageSrc}}">
+ </section>
+<br><br>
+
+<div class="container">
+    <div class="col-md-12">
+        <div class="title-header text-center">
+            <h4>on sale</h4>
+            <br>
+            <h6><em>You can get <span style="color: red;">Just One Product </span> of the following products </em> </h6>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-3 col-sm-6" *ngFor="let prod of discountsProduct">
+            <div class="product-grid4">
+                <div class="product-image4">
+                    <a href="#">
+                        <img class="pic-1" src="{{prod.imgUrl}}">
+                        <img class="pic-2" src="{{prod.imgUrl}}">
+                    </a>
+                    <ul class="social">
+                        <li><a data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                     
+                    <span class="product-discount-label">{{prod.Discounts}}%</span>
+                    
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">{{prod.Description}}</a></h3>
+                    <span >{{prod.name}}</span>
+                    <div class="price">
+                        ${{prod.price}}
+                        <span>${{prod.oldPrice}}</span>
+                    </div>
+                    <a class="add-to-cart" (click)="addCart(prod)">ADD TO CART</a>
+                </div>
+            </div>
+        </div>
+        <!--second row new-->
+        <div class="container">
+            <div class="col-md-12">
+                <div class="title-header text-center">
+                    <h4>new products</h4>
+                </div>
+            </div>
+    <div class="row">
+        <div class="col-md-3 col-sm-6" *ngFor="let prod of newProduct">
+            <div class="product-grid4">
+                <div class="product-image4">
+                    <a href="#">
+                        <img class="pic-1" src="{{prod.imgUrl}}">
+                        <img class="pic-2" src="{{prod.imgUrl}}">
+                    </a>
+                    <ul class="social">
+                        <li><a data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                        <li><a data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    
+                    <span class="product-discount-label">New</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">{{prod.Description}}</a></h3>
+                    <span >{{prod.name}}</span>
+                    <div class="price">
+                        ${{prod.price}}
+                    </div>
+                    <a class="add-to-cart" (click)="addCart(prod)">ADD TO CART</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="title-header text-center">
+                <h4>Discount check</h4>
+            </div>            
+</div>
+        <div class="DiscountCheck">
+        <input type="text" [(ngModel)]="productname" placeholder="Product name">
+    </div>
+                <div [ngSwitch]="productname">
+                    <div *ngSwitchCase="'Lenovo'"><img class="infoPic" src="{{discountsProduct[0].imgUrl}}"> <br> Description: {{discountsProduct[0].Description}}  <br> name: {{discountsProduct[0].name}} <br> category: {{discountsProduct[0].category}} <br> Price: {{discountsProduct[0].price}}</div>
+                    <div *ngSwitchCase="'Lenovo'"><img class="infoPic" src="{{discountsProduct[1].imgUrl}}"> <br> Description: {{discountsProduct[1].Description}}  <br> name: {{discountsProduct[1].name}} <br> category: {{discountsProduct[1].category}} <br> Price: {{discountsProduct[1].price}}</div>
+                    <div *ngSwitchCase="'Rayzer'"><img class="infoPic" src="{{discountsProduct[2].imgUrl}}"> <br> Description: {{discountsProduct[2].Description}}  <br> name: {{discountsProduct[2].name}} <br> category: {{discountsProduct[2].category}} <br> Price: {{discountsProduct[2].price}} </div>
+                    <div *ngSwitchCase="'Lenovo'"><img class="infoPic" src="{{discountsProduct[3].imgUrl}}"> <br> Description: {{discountsProduct[3].Description}}  <br> name: {{discountsProduct[3].name}} <br> category: {{discountsProduct[3].category}} <br> Price: {{discountsProduct[3].price}} </div>
+                    <div *ngSwitchCase="'Lenovo'"><img class="infoPic" src="{{discountsProduct[4].imgUrl}}"> <br> Description: {{discountsProduct[4].Description}}  <br> name: {{discountsProduct[4].name}} <br> category: {{discountsProduct[4].category}} <br> Price: {{discountsProduct[4].price}} </div>
+                    <div *ngSwitchCase="'antec'"><img class="infoPic" src="{{discountsProduct[5].imgUrl}}"> <br> Description: {{discountsProduct[5].Description}}  <br> name: {{discountsProduct[5].name}} <br> category: {{discountsProduct[5].category}} <br> Price: {{discountsProduct[5].price}} </div>
+                    <div *ngSwitchCase="'Rayzer'"><img class="infoPic" src="{{discountsProduct[6].imgUrl}}"> <br> Description: {{discountsProduct[6].Description}}  <br> name: {{discountsProduct[6].name}} <br> category: {{discountsProduct[6].category}} <br> Price: {{discountsProduct[6].price}} </div>
+                    <div *ngSwitchCase="'antec'"><img class="infoPic" src="{{discountsProduct[7].imgUrl}}"> <br> Description: {{discountsProduct[7].Description}}  <br> name: {{discountsProduct[7].name}} <br> category: {{discountsProduct[7].category}} <br> Price: {{discountsProduct[7].price}} </div>
+                    <div *ngSwitchDefault>There is no discount on the product</div>
+                    <app-footer></app-footer>
+                </div>
+                

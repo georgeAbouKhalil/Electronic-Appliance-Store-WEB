@@ -1,0 +1,85 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<html>
+  <head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+  </head>
+<body id="LoginForm">
+<div class="container">
+<h1 class="form-heading">Sign UP Form</h1>
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+   <h2>Sign UP</h2>
+   <p>Please enter your Details</p>
+   </div>
+    <form id="Login" (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+
+        <div class="form-group">
+
+            <input formControlName="email" type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+            <div *ngIf="!signupForm.controls.email!.valid && (signupForm.controls.email!.dirty || signupForm.controls.email?.touched)" 
+                style="color: red"> Invalid email
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            <input formControlName="userName" type="text" class="form-control" name="userName" id="userName" placeholder="user Name">
+            <div *ngIf="!signupForm.controls.userName!.valid && (signupForm.controls.userName!.dirty || signupForm.controls.userName?.touched)" 
+                style="color: red"> Invalid user name min 5
+            </div>
+        </div>
+        <div class="form-group">
+
+            <input formControlName="password" type="password" class="form-control" name="password" id="password" placeholder="Password">
+            <div *ngIf="!signupForm.controls.password!.valid && (signupForm.controls.password!.dirty || signupForm.controls.password?.touched)" 
+                style="color: red"> Invalid password min 6
+            </div>
+        </div>
+        <div class="form-group"> 
+
+            <input formControlName="address" type="text" class="form-control" name="address" id="address" placeholder="address">
+            <div *ngIf="!signupForm.controls.address!.valid && (signupForm.controls.address!.dirty || signupForm.controls.address?.touched)" 
+                style="color: red"> Invalid address
+            </div>
+        </div>
+        <div class="form-group">
+
+            <input formControlName="Phone" type="text" class="form-control" name="Phone" id="Phone" placeholder="Phone">
+            <div *ngIf="!signupForm.controls.Phone!.valid && (signupForm.controls.Phone!.dirty || signupForm.controls.Phone?.touched)" 
+                style="color: red"> Please, Enter 10 digit Mobile Number
+            </div>
+        </div>
+        <div class="form-group"> 
+
+            <input formControlName="fullName" type="text" class="form-control" name="fullName" id="fullName" placeholder="full Name">
+            <div *ngIf="!signupForm.controls.fullName!.valid && (signupForm.controls.fullName!.dirty || signupForm.controls.fullName?.touched)" 
+                style="color: red"> Invalid Full Name
+            </div>
+        </div>
+        <div class="form-group">
+
+            <input formControlName="imgUrl" type="url" id="image" name="image" placeholder="Image URL" >
+
+        </div>
+        
+        <div class="forgot">
+       
+    </div>
+        <button type="submit" [disabled]="!signupForm.valid" class="btn btn-primary">Sign Up</button>
+
+    </form>
+    <a routerLink="/login">Already registered? Click to login!!</a>
+    </div>
+<p class="botto-text"> made with <i class="far fa-heart"></i> by George ak & Sameh besan</p>
+</div></div>
+
+
+</body>
+</html>

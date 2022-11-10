@@ -1,0 +1,17 @@
+<div class="block-show">
+    <ng-container *ngIf="selectedCategory == 'null'">
+        <app-details></app-details>
+    </ng-container>
+    
+    <ng-container *ngIf="selectedCategory == 'pc'">
+        <app-computers></app-computers>
+    </ng-container>
+
+    <ng-container *ngIf="selectedCategory == 'monitors'">
+        <app-monitors></app-monitors>
+    </ng-container>
+
+    <ng-container *ngIf="selectedCategory == 'tablets'">
+        <app-tablets></app-tablets>
+    </ng-container>
+</div>

@@ -1,0 +1,48 @@
+ <section class="cart_section">
+  <div class="container">
+      
+      <table>
+
+      <tr>
+          <th>Image</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Sub Total</th>
+          <th>Remove Item</th>
+      </tr>
+
+      <tr *ngFor="let product of this.cartService.cartItems" >
+          <td><img src="{{product.imgUrl}}" alt="P1"></td>
+          <td>${{product.price}}</td>
+          <td>
+
+
+              <input
+              type="number"
+              class="amountOfProductsInput"
+              [max]="maxAmount"
+              [min]="minAmount"
+              value="{{product.qnt}}"
+              disabled
+            />
+            <br>
+            <button class="btn" (click)="[incQnt(product)]" >
+            
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+            <button [disabled]="product.qnt === 1" class="btn" (click)="[decQnt(product)]" >
+            <span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
+            </button>
+
+          </td>
+          <td>$ {{product.price * product.qnt | number}}</td>
+          <button class="trash" (click)="removeFromCart(product)"><i class="fas fa-trash-alt"></i></button>
+      </tr>
+
+      </table>
+      <div class="row">
+          <div class="col-md-6">
+          </div>
+      </div>
+  </div>
+</section>

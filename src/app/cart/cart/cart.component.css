@@ -1,0 +1,116 @@
+.cart_section{
+    padding: 40px 0;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  img{
+      width: 160px;
+      height: 160px;
+    }
+    .btn{
+    background: #007bff;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 2%;
+    color: white;
+    margin: 0 6px
+}
+.trash{
+  position: relative;
+  top: 73px;
+  left:35%;
+  color: #007bff;
+  border:1px solid #007bff;
+  cursor: pointer;
+  font-size: 18px;
+}
+.btn1{
+  position: relative;
+  left: 96.3vh;
+  border-radius: 50px;
+  font-family: sans-serif;
+  background: rgb(255, 196, 57);
+  color: black;
+  border: none;
+  font-weight: bold;
+  width: 150px;
+}
+.paypal_logo{
+  width: 20px;
+  height: 20px;
+}
+.pay{
+  color: rgb(16, 57, 131)
+}
+.pal{
+  color: rgb(0, 156, 222);
+}
+.fas{
+  color: red;
+}
+.btn{
+  background: #007bff;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 2%;
+  color: white;
+  margin: 0 6px
+}
+.btn1{
+border-radius: 50px;
+font-family: sans-serif;
+background: rgb(255, 196, 57);
+color: black;
+border: none;
+font-weight: bold;
+width: 150px;
+}
+.paypal_logo{
+width: 20px;
+height: 20px;
+}
+.pay{
+color: rgb(16, 57, 131)
+}
+.pal{
+color: rgb(0, 156, 222);
+}
+.fas{
+color: red;
+}
+.title-header:before {
+    border-top: 2px solid #28d094;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.title-header h4 {
+    background: #fff;
+    color: #363636;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 0;
+    padding: 0 30px;
+    position: relative;
+    text-transform:capitalize;
+    border: 2px solid #28d094;
+}
+.ds{
+  margin-top: 20px;
+}

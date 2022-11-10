@@ -1,0 +1,43 @@
+img{
+    height: 160px;
+    width: 160px;
+    position: relative;
+    left: 22%;
+}
+.center{
+    text-align: center;
+}
+button{
+    font-family: sans-serif;
+}
+small{
+    font-family: sans-serif;
+}
+.btn{
+    background: #007bff;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 2%;
+    color: white;
+    margin: 0 6px
+}
+.center{
+    text-align: center;
+}
+.plus{
+    font-weight: 800;
+    font-size: 18px;
+}
+.btn-long{
+    color: white;
+    font-size: 16px;
+    background: #007bff;
+    padding: 6px 12px;
+    border-radius: 2px 2px 2px 2px;
+    font-weight: 600;
+}
+.btn-long:hover{
+    color: #007bff;
+    background: white;
+    border: 3px solid #007bff;
+}

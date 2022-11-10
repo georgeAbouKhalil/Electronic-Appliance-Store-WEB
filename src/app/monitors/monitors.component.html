@@ -1,0 +1,37 @@
+<div class="card-deck">
+    <div class="card border-secondary mb-3" style="max-width: 20rem;" *ngFor="let monitor of productMonitor | slice:0:5; let i=index">
+        <div class="card-header"><img [src]="imgUrlLogo" alt="">
+        <br><small>{{monitor.Description}}</small></div>
+        <div class="card-body">
+          <h4 class="card-title"><img src={{monitor.imgUrl}} alt=""></h4>
+          <h4 class="center">$ {{monitor.price}}</h4>
+        </div>
+        <div class="center">
+          <button type="button" class="btn" (click)="inc(monitor)"><i class="fa fa-plus" aria-hidden="true"></i></button>
+          <span class="plus">{{monitor.qnt}}</span>
+          <button type="button" class="btn" (click)="dec(monitor)"><span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span></button>
+        </div><br>
+        <center><a [routerLink]="['/product',monitor.prodId]">Show More</a></center> <!-- show more details -->
+      <br>
+        <button type="button" class="btn-long" (click)="addCart(monitor)">add to cart</button>
+      </div>
+    </div>
+    <!--second row-->
+    <div class="card-deck">
+      <div class="card border-secondary mb-3" style="max-width: 20rem;" *ngFor="let monitor of productMonitor | slice:5:10; let i=index">
+        <div class="card-header"><img [src]="imgUrlLogo" alt="">
+        <br><small>{{monitor.Description}}</small></div>
+        <div class="card-body">
+          <h4 class="card-title"><img src = {{monitor.imgUrl}} alt=""></h4>
+          <h4 class="center">$ {{monitor.price}}</h4>
+        </div>
+        <div class="center">
+          <button type="button" class="btn" (click)="inc(monitor)"><i class="fa fa-plus" aria-hidden="true"></i></button>
+          <span class="plus">{{monitor.qnt}}</span>
+          <button type="button" class="btn" (click)="dec(monitor)"><span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span></button>
+        </div><br>
+        <center><a [routerLink]="['/product',monitor.prodId]">Show More</a></center> <!-- show more details -->
+      <br>
+        <button type="button" class="btn-long" (click)="addCart(monitor)">add to cart</button>
+      </div>
+    </div>

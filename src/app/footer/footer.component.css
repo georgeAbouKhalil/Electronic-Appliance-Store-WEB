@@ -1,0 +1,106 @@
+.sticky-footer{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: auto;
+    left: 0px;
+    padding-top: 40px;
+}
+.move-letters{
+    position: relative;
+    left: 1%;
+}
+h1{
+    color: #3947b4;
+    position: relative;
+    left: 1%;
+}
+img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: -200px;
+    left: 43%;
+}
+.Links{
+    text-align: center;
+    position:absolute;
+    top: 130%;
+    left: 75%;
+}
+.Links h5{
+    color: rgb(255, 255, 255);
+}
+.paypalLogo{
+    width: 300px;
+    height: 80px;
+    position: absolute;
+    left: 67%;
+    top: 450%;
+}
+.copyright{
+    margin-bottom: -8px;
+    text-align: center;
+    font-size: 15px;
+    position: relative;
+}
+.fa-heart{
+    color: red;
+    font-size: 17px;
+}
+.underLine{
+    width: 13%;
+    height: 5px;
+    background: #013f7e;
+    border-radius: 3px;
+    position: absolute;
+    top: 50px;
+    left: 3;
+    overflow: hidden;
+}
+.underLine2{
+    width: 120%;
+    height: 5px;
+    background: #013f7e;
+    border-radius: 3px;
+    position: absolute;
+    top: 30px;
+    left: 3;
+    overflow: hidden;
+}
+.underLine span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+.underLine2 span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving2 2s linear infinite;
+}
+@keyframes moving {
+    0%{
+        left: -10px;
+    }
+    100%{
+        left: 200px;
+    }
+}
+@keyframes moving2 {
+    0%{
+        left: -10px;
+    }
+    100%{
+        left: 120px;
+    }   
+}

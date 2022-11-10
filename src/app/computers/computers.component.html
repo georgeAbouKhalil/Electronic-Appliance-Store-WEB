@@ -1,0 +1,40 @@
+<div class="card-deck">
+<div class="card border-secondary mb-3" style="max-width: 20rem;" *ngFor="let computer of productPC | slice:0:5; let i=index">
+  <ng-container *ngIf="computer.pc == selectedCategory"> <!--if the category == pc-->
+    <div class="card-header"><img [src]="imgUrlLogo" alt="">
+    <br><small> {{computer.Description}} </small></div>
+    <div class="card-body">
+      <h4 class="card-title"><img [src]="computer.imgUrl" alt=""></h4>
+    </div>
+    <h4 class="center">$ {{computer.price}}</h4>
+    <div class="center">
+      <button type="button" class="btn" (click)="inc(computer)"><i class="fa fa-plus" aria-hidden="true"></i></button>
+      <span class="plus">{{computer.qnt}}</span>
+      <button type="button" class="btn" (click)="dec(computer)"><i class="fa fa-minus" aria-hidden="true"></i></button>
+    </div><br>
+      <center><a [routerLink]="['/product',computer.prodId]">Show More</a></center> <!-- show more details -->
+    <br>
+    <button type="button" class="btn-long" (click)="addCart(computer)">add to cart</button>
+    
+  </ng-container>
+  </div>
+</div>
+<!--second row-->
+<div class="card-deck">
+  <div class="card border-secondary mb-3" style="max-width: 20rem;" *ngFor="let laptop of productPC | slice:5:10; let i=index">
+    <div class="card-header"><img [src]="imgUrlLogo" alt="">
+    <br><small>{{laptop.Description}}</small></div>
+    <div class="card-body">
+      <h4 class="card-title"><img [src]="laptop.imgUrl" alt=""></h4>
+      <h4 class="center">$ {{laptop.price}}</h4>
+    </div>
+    <div class="center">
+      <button type="button" class="btn" (click)="inc(laptop)"><i class="fa fa-plus" aria-hidden="true"></i></button>
+      <span class="plus">{{laptop.qnt}}</span>
+      <button type="button" class="btn" (click)="dec(laptop)"><span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span></button>
+    </div><br>
+    <center><a [routerLink]="['/product',laptop.prodId]">Show More</a></center> <!-- show more details -->
+  <br>
+    <button type="button" class="btn-long" (click)="addCart(laptop)">add to cart</button>
+  </div>
+</div>

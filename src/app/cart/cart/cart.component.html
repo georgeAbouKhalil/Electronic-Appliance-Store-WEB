@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+
+<table>
+<div class="ds">
+    <div class="col-md-12">
+      <div class="title-header text-center">
+        <h4>Cart</h4>
+      </div>
+  </div>
+</div>
+<div class="cart ">
+  <div class="d-flex cart-items align-items-center justify-content-center flex-wrap">
+      <div  class="containerDiv ">
+
+      <app-cart-item > </app-cart-item>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="bottom d-flex flex-column align-items-center mt-4">
+  <div class="total-price d-flex">
+    <label for="h5">Total price: </label>
+    <h5 class="ms-3">{{ this.cartService.total }}$</h5>
+  </div>
+  <div class="buttons d-flex flex-row align-items-center">
+
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-md-6">
+      
+      <button type="button" (click)="openSmallWindows()" class="btn1 btn-primary"><img class="paypal_logo" src="https://www.paypalobjects.com/webstatic/icon/pp258.png"><i class="pay">Pay</i><i class="pal">Pal</i></button>
+  </div>
+</div>
+</table>
+
+
+<app-footer></app-footer>
